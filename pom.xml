@@ -14,9 +14,10 @@
 	<packaging>war</packaging>
 	<name>spring-course</name>
 	<description>SPRING - RESTful API</description>
-
+	
 	<properties>
 		<java.version>1.8</java.version>
+		<skipTests>true</skipTests>
 	</properties>
 
 	<dependencies>
