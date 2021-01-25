@@ -1,5 +1,7 @@
 C:\udemy\restful_aws\spring-course\src\main\java\com\springcourse\resource\exception\ResourceExceptionHandler.java
 C:\udemy\restful_aws\spring-course\src\main\java\com\springcourse\service\RequestService.java
+C:\udemy\restful_aws\spring-course\src\main\java\com\springcourse\security\CustomPasswordEncoder.java
+C:\udemy\restful_aws\spring-course\src\main\java\com\springcourse\security\SecurityConfig.java
 C:\udemy\restful_aws\spring-course\src\main\java\com\springcourse\SpringCourseApplication.java
 C:\udemy\restful_aws\spring-course\src\main\java\com\springcourse\domain\enums\Role.java
 C:\udemy\restful_aws\spring-course\src\main\java\com\springcourse\resource\UserResource.java
@@ -22,9 +24,11 @@ C:\udemy\restful_aws\spring-course\src\main\java\com\springcourse\resource\Reque
 C:\udemy\restful_aws\spring-course\src\main\java\com\springcourse\resource\exception\ApiErrorList.java
 C:\udemy\restful_aws\spring-course\src\main\java\com\springcourse\dto\RequestStageSavedto.java
 C:\udemy\restful_aws\spring-course\src\main\java\com\springcourse\service\UserService.java
+C:\udemy\restful_aws\spring-course\src\main\java\com\springcourse\constant\SecurityConstants.java
 C:\udemy\restful_aws\spring-course\src\main\java\com\springcourse\dto\RequestUpdatedto.java
 C:\udemy\restful_aws\spring-course\src\main\java\com\springcourse\exception\NotFoundException.java
 C:\udemy\restful_aws\spring-course\src\main\java\com\springcourse\domain\User.java
 C:\udemy\restful_aws\spring-course\src\main\java\com\springcourse\dto\UserUpdateRoledto.java
 C:\udemy\restful_aws\spring-course\src\main\java\com\springcourse\domain\RequestStage.java
 C:\udemy\restful_aws\spring-course\src\main\java\com\springcourse\dto\UserLogindto.java
+C:\udemy\restful_aws\spring-course\src\main\java\com\springcourse\security\JwtManager.java

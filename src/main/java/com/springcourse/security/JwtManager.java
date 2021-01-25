@@ -20,7 +20,7 @@ public class JwtManager {
 						.setSubject(email)
 						.setExpiration(calendar.getTime())
 						.claim(SecurityConstants.JWT_ROLE_KEY, roles)
-						.signWith(SignatureAlgorithm.HS512, SecurityConstants.API_KEY.getBytes())
+						.signWith(SignatureAlgorithm.HS256, SecurityConstants.API_KEY.getBytes())
 						.compact();
 		
 		return jwt;
