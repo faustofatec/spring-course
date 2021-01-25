@@ -23,7 +23,7 @@ public class JwtManager {
 						.setSubject(email)
 						.setExpiration(calendar.getTime())
 						.claim(SecurityConstants.JWT_ROLE_KEY, roles)
-						.signWith(SignatureAlgorithm.HS256, SecurityConstants.API_KEY.getBytes())
+						.signWith(SignatureAlgorithm.HS512, SecurityConstants.API_KEY.getBytes())
 						.compact();
 		
 		Long expireIn = calendar.getTimeInMillis();
@@ -35,7 +35,7 @@ public class JwtManager {
 	public Claims parseToken(String jwt) throws JwtException {
 		Claims claims = Jwts.parser()
 							.setSigningKey(SecurityConstants.API_KEY.getBytes())
-							.parseClaimsJwt(jwt)
+							.parseClaimsJws(jwt)
 							.getBody();
 		
 		return claims;

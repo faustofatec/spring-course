@@ -45,6 +45,8 @@ public class AuthorizationFilter extends OncePerRequestFilter {
 			
 			response.setContentType(MediaType.APPLICATION_JSON_UTF8_VALUE);
 			response.setStatus(HttpStatus.UNAUTHORIZED.value());
+			
+			return;
 		}
 		
 		jwt = jwt.replace(SecurityConstants.JWT_PROVIDER, "");
