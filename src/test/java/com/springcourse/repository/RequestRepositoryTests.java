@@ -24,7 +24,7 @@ public class RequestRepositoryTests {
 	public void saveTest() {
 		User owner = new User();
 		owner.setId(1L);
-		Request request = new Request(null, "Novo laptop HP", "Precisando de um laptop HP", new Date(), RequestState.OPEN, owner, null); 
+		Request request = new Request(null, "Novo laptop HP", "Precisando de um laptop HP", new Date(), RequestState.OPEN, owner, null, null); 
 		
 		Request createRequest = requestRepository.save(request);
 		
@@ -36,7 +36,7 @@ public class RequestRepositoryTests {
 	public void updateTest() {
 		User owner = new User();
 		owner.setId(1L);
-		Request request = new Request(1L, "Novo laptop HP", "Precisando de um laptop HP, de RAM 6GB", null, RequestState.OPEN, owner, null); 
+		Request request = new Request(1L, "Novo laptop HP", "Precisando de um laptop HP, de RAM 6GB", null, RequestState.OPEN, owner, null, null); 
 		
 		Request updateRequest = requestRepository.save(request);
 		
