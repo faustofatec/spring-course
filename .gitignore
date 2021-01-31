@@ -4,3 +4,7 @@
 *.class
 *.war
 *.jar
+*.class
+*.original
+*.war
+*.original
