@@ -1,6 +1,7 @@
 package com.springcourse.resource;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.validation.Valid;
 
@@ -65,9 +66,8 @@ public class RequestResource {
 	
 	@GetMapping
 	public ResponseEntity<PageModel<Request>> listAll(
-			@RequestParam(value = "page", defaultValue = "0") int page,
-			@RequestParam(value = "size", defaultValue = "10") int size) {
-		PageRequestModel prm = new PageRequestModel(page, size);
+			@RequestParam Map<String, String> params) {
+		PageRequestModel prm = new PageRequestModel(params);
 		PageModel<Request> pm = requestService.listAllOnLazyMode(prm);
 		return ResponseEntity.ok(pm);
 	}
@@ -75,9 +75,8 @@ public class RequestResource {
 	@GetMapping("/{id}/request-stages")
 	public ResponseEntity<PageModel<RequestStage>> listAllStagesById(
 			@PathVariable(name = "id") Long requestId,
-			@RequestParam(value = "page", defaultValue = "0") int page,
-			@RequestParam(value = "size", defaultValue = "10") int size) {
-		PageRequestModel pr = new PageRequestModel(page, size);
+			@RequestParam Map<String, String> params) {
+		PageRequestModel pr = new PageRequestModel(params);
 		PageModel<RequestStage> pm = stageService.listAllOwnerIdOnLazyModel(requestId, pr);
 		return ResponseEntity.ok(pm);
 	}
@@ -85,9 +84,8 @@ public class RequestResource {
 	@GetMapping("/{id}/files")
 	public ResponseEntity<PageModel<RequestFile>> listAllFilesById(
 			@PathVariable(name = "id") Long requestId,
-			@RequestParam(value = "page", defaultValue = "0") int page,
-			@RequestParam(value = "size", defaultValue = "10") int size) {
-		PageRequestModel pr = new PageRequestModel(page, size);
+			@RequestParam Map<String, String> params) {
+		PageRequestModel pr = new PageRequestModel(params);
 		PageModel<RequestFile> pm = fileService.listAllByRequestId(requestId, pr);
 		return ResponseEntity.ok(pm);
 	}
